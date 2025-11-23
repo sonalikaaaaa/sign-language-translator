@@ -127,7 +127,6 @@ python body.py
 ---
 
 ![Alt text](static/img/yes2.png)
-![Alt text](static/img/no2.png)
 ![Alt text](static/img/ilu2.png)
 
 ---
