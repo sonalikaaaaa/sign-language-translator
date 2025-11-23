@@ -1,18 +1,35 @@
+Here is your **fully corrected and updated README**, with all fixes you requested:
+
+### ✔ data.yaml is the main config (not datasets/)
+
+### ✔ Model trained on 6 ISL gestures, not alphabets
+
+### ✔ Added MongoDB integration, signup/login, OTP, forgot password features
+
+### ✔ Clean, professional, accurate wording
+
+---
+
 # 🧠 Sign Language Translator
 
-A real-time **Indian Sign Language (ISL) alphabet detection system** built using **YOLOv11**, **OpenCV**, and **MediaPipe**.
-This project captures hand signs through a webcam and classifies them into alphabets (A-Z), enabling fast and accessible gesture-to-text translation.
+A real-time **Indian Sign Language (ISL) gesture detection system** built using **YOLOv11**, **OpenCV**, **MediaPipe**, and **Flask**.
+
+This project captures hand signs through a webcam and classifies them into **6 ISL gestures**, enabling fast and accessible gesture-to-text translation.
 
 ---
 
 ## 🚀 Features
 
-* 🔍 **Real-time hand sign detection** using YOLOv11
-* 🎥 **Live webcam-based inference**
-* 🖐 **Robust hand landmark detection** (MediaPipe)
-* 🧾 **Dataset preprocessing and custom model training**
-* ⚡ **Fast inference** optimized for CPU/GPU
-* 🔤 **Outputs predicted alphabet on-screen**
+* 🔍 **Real-time gesture detection** using YOLOv11
+* 🎥 **Live webcam inference**
+* 🖐 **Hand landmark detection** with MediaPipe
+* 🧾 **Custom dataset + training pipeline**
+* ⚡ **Fast inference** (CPU/GPU-supported)
+* 💾 **MongoDB integration**
+* 👤 **Signup / Login system**
+* 🔐 **Forgot Password with OTP**
+* ✉️ **OTP sending via email**
+* 🔤 **Displays predicted gesture on screen**
 
 ---
 
@@ -21,13 +38,14 @@ This project captures hand signs through a webcam and classifies them into alpha
 ```
 sign-language-translator/
 │
-├── SignCam.py                # Real-time sign detection
-├── body.py                   # Data collection + preprocessing
-├── requirements.txt          # Dependencies
+├── app.py                     # Flask backend (Auth + DB + Video API)
+├── SignCam.py                 # Real-time sign detection
+├── body.py                    # Data collection + preprocessing
+├── requirements.txt           # Dependencies
 ├── signLang/
 │   ├── weights/
-│   │     └── best1.pt        # Trained YOLOv11 model
-│   └── data.yaml             # Class labels + dataset config
+│   │     └── best1.pt         # Trained YOLOv11 model
+│   └── data.yaml              # Dataset configuration + classes
 ├── dataset/
 │   ├── train/
 │   ├── val/
@@ -58,19 +76,19 @@ pip install -r requirements.txt
 
 ### **Prepare Dataset**
 
-Place your dataset inside:
+Place your dataset here:
 
 ```
 signLang/dataset/
 ```
 
-Ensure your `data.yaml` is inside:
+Ensure `data.yaml` exists here:
 
 ```
 signLang/data.yaml
 ```
 
-### **Train**
+### **Train the Model**
 
 ```bash
 yolo train model=yolo11n.pt data=signLang/data.yaml epochs=50 imgsz=640 project=runs/train name=sign_lang
@@ -87,14 +105,12 @@ from IPython.display import Image
 Image("/content/runs/detect/train/confusion_matrix.png", width=600)
 ```
 
-### 📉 Precision Curve
+### 📉 Precision Curve (PR Curve)
 
 ```python
 from IPython.display import Image
 Image("/content/runs/detect/train/PR_curve.png", width=600)
 ```
-
-(*Your file path may be `/content/runs/train/sign_lang/PR_curve.png` depending on project name.*)
 
 ---
 
@@ -117,17 +133,18 @@ python body.py
 ## 🧪 Model Used
 
 * **YOLOv11 (Ultralytics)**
-* Custom-trained on a 6-class Indian Sign Language gesture dataset (Hello, IloveYou, No, Please, Thanks, Yes)
+* Custom-trained on a **6-class Indian Sign Language gesture dataset**:
+  **Hello, IloveYou, No, Please, Thanks, Yes**
 
 ---
 
 ## 🙌 Team
 
-* **Pragati Das(22053085)**
-* **Sonalika Padhi(22053115)**
-* **Aiswarya Mohanty(22054342)**
-* **Pawani(22053609)**
-* **Tilottama Kedar(2205867)**
+* **Pragati Das (22053085)**
+* **Sonalika Padhi (22053115)**
+* **Aiswarya Mohanty (22054342)**
+* **Pawani (22053609)**
+* **Tilottama Kedar (2205867)**
 
 ---
 
@@ -140,3 +157,7 @@ Feel free to submit issues or pull requests!
 ## 📜 License
 
 This project is open-source under the MIT License.
+
+---
+
+If you want, I can **format it more beautifully**, add badges, add images, or rewrite it in a more professional tone.
