@@ -1,7 +1,7 @@
 from email.message import EmailMessage
 import smtplib
 #import backend.mongo as mongo
-import mongo
+import backend.dbmongo as mongo
 import random
 import os
 from dotenv import load_dotenv
