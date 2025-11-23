@@ -1,15 +1,3 @@
-Here is your **fully corrected and updated README**, with all fixes you requested:
-
-### ✔ data.yaml is the main config (not datasets/)
-
-### ✔ Model trained on 6 ISL gestures, not alphabets
-
-### ✔ Added MongoDB integration, signup/login, OTP, forgot password features
-
-### ✔ Clean, professional, accurate wording
-
----
-
 # 🧠 Sign Language Translator
 
 A real-time **Indian Sign Language (ISL) gesture detection system** built using **YOLOv11**, **OpenCV**, **MediaPipe**, and **Flask**.
@@ -153,11 +141,3 @@ python body.py
 Feel free to submit issues or pull requests!
 
 ---
-
-## 📜 License
-
-This project is open-source under the MIT License.
-
----
-
-If you want, I can **format it more beautifully**, add badges, add images, or rewrite it in a more professional tone.
