@@ -1,4 +1,4 @@
-# 🧠 Sign Language Translator
+# 🧠 Gestura: The Sign Language Translator
 
 A real-time **Indian Sign Language (ISL) gesture detection system** built using **YOLOv11**, **OpenCV**, **MediaPipe**, and **Flask**.
 
@@ -123,6 +123,12 @@ python body.py
 * **YOLOv11 (Ultralytics)**
 * Custom-trained on a **6-class Indian Sign Language gesture dataset**:
   **Hello, IloveYou, No, Please, Thanks, Yes**
+
+---
+
+![Alt text](static/img/yes2.png)
+![Alt text](static/img/no2.png)
+![Alt text](static/img/ilu2.png)
 
 ---
 
