@@ -117,17 +117,17 @@ python body.py
 ## 🧪 Model Used
 
 * **YOLOv11 (Ultralytics)**
-* Custom-trained on **Indian Sign Language alphabet gestures**
+* Custom-trained on a 6-class Indian Sign Language gesture dataset (Hello, IloveYou, No, Please, Thanks, Yes)
 
 ---
 
 ## 🙌 Team
 
-* **Pragati Das**
-* **Sonalika Panda**
-* **Aiswarya**
-* **Pawani**
-* **Tilottama**
+* **Pragati Das(22053085)**
+* **Sonalika Padhi(22053115)**
+* **Aiswarya Mohanty(22054342)**
+* **Pawani(22053609)**
+* **Tilottama Kedar(2205867)**
 
 ---
 
